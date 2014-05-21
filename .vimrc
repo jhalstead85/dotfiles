@@ -29,13 +29,26 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
+" Don't highlight the current line
+set nocursorline
+" Highlight a vertical column at column 81
+set colorcolumn=81
+" Set background to the dark version
+set background=dark
+" Disable line wrapping
+set nowrap
+set nolist
+set textwidth=0
+set wrapmargin=0
+
+
 " Respect modeline in files
 set modeline
 set modelines=4
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
-" Enable line numbers
+" background line numbers
 set number
 " Enable syntax highlighting
 syntax on
@@ -43,6 +56,9 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -57,7 +73,7 @@ set laststatus=2
 " Enable mouse in all modes
 set mouse=a
 " Disable error bells
-set noerrorbells
+set noerrorbells visualbell t_vb=
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 " Show the cursor position
